@@ -1,7 +1,13 @@
 package eloEngine.EloMaths;
 
-public interface EloMargin {
+public abstract class EloMargin {
+    public double margin;
 
-    void calculateMargin();
-    double getMargin();
+    public EloMargin(double margin) {
+        this.margin = margin;
+    }
+
+    public abstract void calculateMargin();
+
+    public abstract double getMarginAdj();
 }

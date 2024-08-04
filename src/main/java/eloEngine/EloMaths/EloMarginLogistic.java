@@ -1,28 +1,29 @@
 package eloEngine.EloMaths;
 
-import eloEngine.EloMaths.EloMargin;
-
 import java.lang.Math;
 
-public class EloMarginLogistic implements EloMargin {
+public class EloMarginLogistic extends EloMargin {
     
-    public double m;
     public double margin;
+    public double marginAdj;
 
     public EloMarginLogistic(double m) {
-        this.m = m;
+        super(m);
         calculateMargin();
         // could we use dependency injection here? to stop init of margin outside
         // the constructor, to avoid null pointers?
     }
 
+    @Override
     public void calculateMargin() {
-        double pow = 1 - Math.pow(m, 2);
-        this.margin = 1 / (1 + Math.exp(pow));
+        double pow = 1 - Math.pow(margin, 2);
+        this.marginAdj = 1 / (1 + Math.exp(pow));
     }
 
-    public double getMargin() {
-        return this.margin;
+
+    @Override
+    public double getMarginAdj() {
+        return this.marginAdj;
     }
 
 }

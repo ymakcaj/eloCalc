@@ -1,24 +1,24 @@
 package eloEngine.EloMaths;
 
-import eloEngine.EloMaths.EloMargin;
-
 import java.lang.Math;
 
-public class EloMarginAlgebraic implements EloMargin {
+public class EloMarginAlgebraic extends EloMargin {
 
-    public double m;
     public double margin;
+    public double marginAdj;
 
-    public EloMarginAlgebraic(double m) {
-        this.m = m;
+    public EloMarginAlgebraic(double margin) {
+        super(margin);
         calculateMargin();
     }
 
+    @Override
     public void calculateMargin() {
-        this.margin = 0.5 * (1 + (m /(Math.sqrt(1 + Math.pow(m, 2)))));
+        this.marginAdj = 0.5 * (1 + (margin /(Math.sqrt(1 + Math.pow(margin, 2)))));
     }
     
-    public double getMargin() {
-        return this.margin;
+    @Override
+    public double getMarginAdj() {
+        return this.marginAdj;
     }
 }

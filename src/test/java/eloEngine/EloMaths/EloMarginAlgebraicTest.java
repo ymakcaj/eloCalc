@@ -1,7 +1,5 @@
 package eloEngine.EloMaths;
 
-import eloEngine.EloMaths.EloMarginAlgebraic;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,22 +9,22 @@ import java.lang.Math;
 
 
 class EloMarginAlgebraicTest{
-    private double m;
+    private double margin;
 
     @BeforeEach
     void setUp() {
-        m = Math.random() * 1;
+        margin = Math.random() * 1;
     }
 
     @AfterEach
     void tearDown() {
-      m = 0;
+      margin = 0;
     }
 
     @Test
     void executeValid() {
-        EloMarginAlgebraic eloMarginAlEloMarginAlgebraic = new EloMarginAlgebraic(m);
-        Assertions.assertTrue((eloMarginAlEloMarginAlgebraic.getMargin() < 1));
+        EloMarginAlgebraic eloMarginAlEloMarginAlgebraic = new EloMarginAlgebraic(margin);
+        Assertions.assertTrue((eloMarginAlEloMarginAlgebraic.getMarginAdj() < 1));
 
     }
 
