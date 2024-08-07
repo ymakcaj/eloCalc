@@ -39,7 +39,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Main.Launcher</mainClass>
+                            <mainClass>eloEngine.Main.Launcher</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -10,10 +10,10 @@ public class Launcher {
     public static void main(String args[]) {
 
         EloActualOutcome eloActualOutcome = new EloActualOutcome(
-            130.0,
-            0.7,
+            10.0,
+            1.5,
             0.49,
-            "logistic"
+            "algebraic"
             );
 
         eloActualOutcome.calculate();

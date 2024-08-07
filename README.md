@@ -30,3 +30,11 @@ This is also true on a log scale:
 <img src="resources/squashing_functions_log.png" alt="Squashing Functions"/>
 
 We may have to transform the margin further to capture larger margins of victory (divide by 10 as an example) - but this will do for now.
+
+
+## Other resources
+
+This [medium post](https://mattmazzola.medium.com/implementing-the-elo-rating-system-a085f178e065)
+
+
+For football, this [kaggle dataset](https://www.kaggle.com/code/abhimanyumehta26/football-match-pred) looks a good starting point.
